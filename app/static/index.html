@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Converter — Spec-Driven Unit Converter</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="dark-mode">
+    <!-- Visual Gradient Blobs for background -->
+    <div class="blob blob-purple"></div>
+    <div class="blob blob-teal"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="logo-icon">🌀</span>
+                <h1 class="logo-title">Quantum<span>Converter</span></h1>
+            </div>
+            <p class="tagline">Elegant, precise unit conversions at your fingertips.</p>
+        </header>
+
+        <!-- Main Card -->
+        <main class="converter-card glass">
+            <!-- Category Selector Tabs -->
+            <div class="category-tabs" id="categoryTabs" role="tablist">
+                <!-- Dynamic Tabs injected via JS -->
+            </div>
+
+            <!-- Conversion Workspace -->
+            <div class="workspace">
+                <!-- Input Panel -->
+                <div class="input-group">
+                    <label for="inputValue" class="field-label">Value to Convert</label>
+                    <input type="number" id="inputValue" class="glass-input" placeholder="Enter value..." value="1" step="any">
+                </div>
+
+                <!-- Unit Pickers Grid -->
+                <div class="picker-grid">
+                    <div class="picker-col">
+                        <label for="fromUnit" class="field-label">From</label>
+                        <select id="fromUnit" class="glass-select">
+                            <!-- Dynamic Units -->
+                        </select>
+                    </div>
+
+                    <!-- Swap Button -->
+                    <button id="swapBtn" class="swap-button" title="Swap Units">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="swap-icon"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
+                    </button>
+
+                    <div class="picker-col">
+                        <label for="toUnit" class="field-label">To</label>
+                        <select id="toUnit" class="glass-select">
+                            <!-- Dynamic Units -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Results Display Panel -->
+                <div class="results-panel glass">
+                    <div class="result-label">Result</div>
+                    <div class="result-display">
+                        <span id="resultValue">—</span>
+                        <span id="resultSymbol" class="symbol-suffix"></span>
+                    </div>
+                    <div id="resultFormula" class="result-formula">—</div>
+                    
+                    <!-- Copy Button -->
+                    <button id="copyBtn" class="copy-button" title="Copy result to clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="copy-icon"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                        <span>Copy Result</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Spec-Driven Development Workshop Submission — Vibe Coded Edition</p>
+        </footer>
+    </div>
+
+    <!-- Script -->
+    <script src="/static/app.js"></script>
+</body>
+</html>
